@@ -1,3 +1,4 @@
+let mySprite: Sprite = null
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite = sprites.create(img`
         . . . . . . f f f f . . . . . . 
@@ -78,8 +79,3 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . f f f . . . . . . . . . 
         `, SpriteKind.Player)
 })
-let mySprite: Sprite = null
-controller.moveSprite(mySprite)
-tiles.setTilemap(tilemap`level1`)
-mySprite.setPosition(20, 51)
-scene.cameraFollowSprite(mySprite)
